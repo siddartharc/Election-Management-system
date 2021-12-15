@@ -1,0 +1,22 @@
+Candidate Table-
+
+create table Candidate(
+id  varchar(4),
+Name varchar(20),
+Party_Name varchar(10),
+contactno varchar(20),
+primary key(id));
+
+Voter Table-
+
+create table Voter(
+Aadhar varchar(12),
+Name varchar(20),
+Password varchar(50),
+contact varchar(10),
+primary key(Aadhar));
+
+cast_vote Table-
+create table cast_vote(
+id varchar(4)REFERENCES candidate (Id),
+aadhar varchar(12)REFERENCES voter (aadhar));
